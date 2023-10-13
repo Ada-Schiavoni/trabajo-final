@@ -1,0 +1,283 @@
+
+/* Fuente del sitio*/
+*{
+    font-family: 'Montserrat', sans-serif; 
+    
+   
+}
+/* Márgenes en 0*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Color de fondo */
+
+.color_cuerpo{
+    background-color: #181d31;
+    color:#e6ddc4; 
+}
+header{
+    background-image: url(./imagenes/codigo.jpg);
+    background-size: cover;
+    min-height: 500px;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 100px;
+    text-align: center;
+}
+h1{
+    text-shadow:  6px 6px black ;
+}
+h2{
+    text-shadow: 2px 2px black;
+    font-size: 40px;
+    text-align: center;
+    color: #678983;
+}
+p{
+    color:#e6ddc4;
+    font-size: 16px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px;
+}
+/* animación logo NO ESTÁ IGUAL HAY UN DESFASAJE ENTRE LO BEIGE Y AZUL - VER!!!!*/
+rect#transf1, polygon#transf1{
+    animation: anima1 ease-in 3s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    
+}
+rect#transf2, polygon#transf2{
+    animation: anima2 ease-in 3s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+}
+@keyframes anima1{
+    0%{
+        transform: translate(0,-30px);
+        opacity:0;
+    }
+    25%{
+        transform: translate(0,-30px);
+        opacity:0;
+    }
+    50%{
+        transform: translate(0,0px);
+        opacity:1;
+    }
+    100%{
+        transform: translate(0,0px);
+        opacity:1;
+    }
+}
+@keyframes anima2{
+    0%{
+        transform: translate(0,0px); 
+        opacity:0;
+    }
+    25%{
+        transform: translate(0,0px);
+        opacity:0;
+    }
+    50%{
+        transform: translate(0,-30px);
+        opacity:1;
+    }
+    100%{
+        transform: translate(0,-30px);
+        opacity:1;
+    }
+}
+
+/* tarjetas*/
+/*Formato de la parte principal del body para todas las páginas*/
+.cont_tarjetas{
+    margin: 100px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+
+.iten_menu_superior{
+    list-style-type: none;
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+/* Formato enlaces*/
+.enlace_menu{
+    background-color: #E6DDC4; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    width: 40px;
+    box-shadow: 3px 3px #678983;
+    padding: 10px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+.enlace_forma{
+    background-color: #181D31;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    width: 40%;
+    box-shadow: 3px 3px #678983;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+/*Formato las tarjetas de Contenido en Index*/
+.cat{
+    width: 350px;
+    height: 400px;
+    border: solid 5px #678983;
+    background-color: #e6ddc4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Imagen de tarjeta*/
+.img_tarjeta{
+    width: 100%;
+    margin: 0px;
+}
+/* Texto de tarjeta*/
+.text_tarjeta{
+    width: 90%;
+    text-align: center;
+    height: 30px;
+    color: #181d31;
+}
+/* página historia*/
+.cont_historia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tarj_historia{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 50px;
+    gap: 20px;
+
+}
+
+.texto_historia{
+    width: 45%;
+}
+/* Contenedor de video*/
+.video_opc{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: black;
+}
+
+.botonera{
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.duracion{
+    padding-right: 110px;
+    align-items:right;
+    text-align: right;
+    
+}
+.botones{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.boton{
+    border-color: 10px black;
+    box-shadow: 2px 3px darkgray;
+    transform: translate(3px, 2px);
+    width: 80px;
+    height: 40px;
+    
+}
+
+/* Página juegos*/
+.cont_tarjetas_juego{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contenedor_imagen{
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    gap: 10px;
+    align-items: center;
+    align-content: center;
+}
+.arrastra_imagen{
+    display: flex;
+    flex-direction: row; 
+}
+.caja_imagen{
+    width: 275px;
+    height: 400px;
+    border: 2px solid black;
+    background-color: grey;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagenes{
+    width: 275px;
+    height: 400px;
+}
+
+/* Pie de página*/
+footer{
+    background-color: #678983;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    color: #181d31;
+}
+.logopie{
+    height: 80px;
+}
+.footer_izq{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+}
+.titulo_pie{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
