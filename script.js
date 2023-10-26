@@ -14,13 +14,13 @@ function calculoMinutos(tiempo) {
     if (parseInt(tiempo)<60) {
        minutos=0
        segundos=tiempo.toFixed(0); 
-       return minutos+":"+segundos
+       
     } else {
-        minutos=((tiempo)/60)
-        return minutos.toFixed(2) /**NO DA BIEN EL VALOR VER PORQUE NECESITA LO DOS PUNTOS
-        TENDRÍA QUE TOMAR EL ENTERO DE LOS MINUTOS Y LUEGO TOMAR LOS DECIMALES PARA SEGUNDOS? */
+        minutos=parseInt(tiempo/60);
+        segundos=parseInt(tiempo%60);
+        
     }
-    
+    return minutos+":"+segundos
 }
 window.addEventListener("load",()=>{
     zonaDuracion.textContent=calculoMinutos(video.duration)
