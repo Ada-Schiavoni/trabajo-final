@@ -7,7 +7,7 @@ let botonPause=document.getElementById("pausa_video");
 let zonaDuracion=document.querySelector(".duracion")
 
 /*Calculo de minutos. Duración duration: 281.10077*/
-/** 
+
 function calculoMinutos(tiempo) {
     let minutos;
     let segundos;
@@ -34,7 +34,7 @@ botonPlay.addEventListener("click",()=>{
 botonPause.addEventListener("click",()=>{
     video.pause()
 });
-*/
+
 
 /*Página juego 
  llama a los elementos de arrastre */
