@@ -17,6 +17,7 @@
     color:#e6ddc4; 
 }
 header{
+    background: fixed;
     background-image: url(./imagenes/codigo.jpg);
     background-size: cover;
     min-height: 500px;
@@ -28,7 +29,7 @@ header{
     text-align: center;
 }
 h1{
-    text-shadow:  6px 6px black ;
+    text-shadow: 2px 2px gray, 6px 6px black ;
 }
 h2{
     text-shadow: 2px 2px black;
@@ -46,7 +47,7 @@ nav{
     align-items: center;
     margin: 0px 40px;
 }
-/* animación logo NO ESTÁ IGUAL HAY UN DESFASAJE ENTRE LO BEIGE Y AZUL - VER!!!!*/
+/* animación logo */
 rect#transf1, polygon#transf1{
     animation: anima1 ease-in 3s;
     animation-direction: normal;
@@ -189,6 +190,7 @@ rect#transf2, polygon#transf2{
 
 .texto_historia{
     width: 45%;
+    text-align: justify;
 }
 /* Contenedor de video*/
 .video_opc{
@@ -198,15 +200,16 @@ rect#transf2, polygon#transf2{
     align-items: center;
     padding: 10px 0px;
     background-color: black;
+    margin: 20px 0px;
 }
 
 .botonera{
     background-color: #3c3c3c;
-    border-radius: 10px;
+    
     display: flex;
     align-items: center;
     width: 100%;
-    height: 40px;
+    height: 60px;
     justify-content: space-between;
 }
 
@@ -219,7 +222,7 @@ rect#transf2, polygon#transf2{
 .botones{
     display: flex;
     gap: 20px;
-    
+
 }
 
 .boton{
@@ -258,6 +261,7 @@ rect#transf2, polygon#transf2{
     text-align: center;
     justify-content: center;
     align-items: center;
+    
 }
 .caja_imagen1:hover,.caja_imagen2:hover,.caja_imagen3:hover{
     background-color: rgb(36, 35, 35);
@@ -275,6 +279,7 @@ rect#transf2, polygon#transf2{
     border-radius: 10px;
     width: 180px;
     height: 40px;
+    margin: 20px 0px;
     
 }
 /* Pie de página*/
