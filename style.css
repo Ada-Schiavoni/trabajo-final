@@ -243,8 +243,8 @@ rect#transf2, polygon#transf2{
 .contenedor_imagen{
     display: flex;
     flex-direction: row;
-    margin: 40px;
-    gap: 10px;
+    margin: 0px;
+    gap: 2px;
     align-items: center;
     align-content: center;
 }

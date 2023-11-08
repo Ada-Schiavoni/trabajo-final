@@ -13,23 +13,22 @@
 
  //comienzo de arrastre para el evento y las imagenes
  imagenRompe1.addEventListener("dragstart", (evento)=>{
-     evento.dataTransfer.setData("text/uri-list","./imagenes/Rompe1.png")
+     evento.dataTransfer.setData("Text","./imagenes/Rompe1.png")
   });
   
  imagenRompe2.addEventListener("dragstart", (evento)=>{
-     evento.dataTransfer.setData("text/uri-list","./imagenes/Rompe2.png")
+     evento.dataTransfer.setData("Text","./imagenes/Rompe2.png")
   });
  
  imagenRompe3.addEventListener("dragstart", (evento)=>{
-     evento.dataTransfer.setData("text/uri-list","./imagenes/Rompe3.png")
+     evento.dataTransfer.setData("Text","./imagenes/Rompe3.png")
   });
   
  //area destino 
  //arma las funciones para soltar el elemento 
  destinoRompe1.addEventListener("dragover",prevenirDefault);
  destinoRompe1.addEventListener("drop",(evento)=>{
-     let dataImagen=evento.dataTransfer.getData("text/uri-list");
-     console.log(dataImagen)
+     let dataImagen=evento.dataTransfer.getData("Text");
      if (dataImagen==="./imagenes/Rompe1.png") {
             destinoRompe1.innerHTML=`<img id="imagenes_rompe1" src="${dataImagen}"/>`;
             imagenRompe1.style.visibility="hidden";
@@ -40,7 +39,7 @@
  });  
  destinoRompe2.addEventListener("dragover",prevenirDefault);
  destinoRompe2.addEventListener("drop",(evento)=>{
-     let dataImagen=evento.dataTransfer.getData("text/uri-list");
+     let dataImagen=evento.dataTransfer.getData("Text");
 
      if (dataImagen==="./imagenes/Rompe2.png") {
         destinoRompe2.innerHTML=`<img id="imagenes_rompe2" src="${dataImagen}"/>`;
@@ -52,7 +51,7 @@
  }); 
  destinoRompe3.addEventListener("dragover",prevenirDefault);
  destinoRompe3.addEventListener("drop",(evento)=>{
-     let dataImagen=evento.dataTransfer.getData("text/uri-list");
+     let dataImagen=evento.dataTransfer.getData("Text");
      if (dataImagen==="./imagenes/Rompe3.png") {
         destinoRompe3.innerHTML=`<img id="imagenes_rompe3" src="${dataImagen}"/>`;
         imagenRompe3.style.visibility="hidden";
