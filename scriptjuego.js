@@ -8,6 +8,9 @@
  let destinoRompe1=document.querySelector(".caja_imagen1");
  let destinoRompe2=document.querySelector(".caja_imagen2");
  let destinoRompe3=document.querySelector(".caja_imagen3");
+
+ //coloca contador para mover el botón reiniciar
+ let contador=0
  
  //arrastra los elementos
 
@@ -32,8 +35,13 @@
      if (dataImagen==="./imagenes/Rompe1.png") {
             destinoRompe1.innerHTML=`<img id="imagenes_rompe1" src="${dataImagen}"/>`;
             imagenRompe1.style.visibility="hidden";
+            contador=contador+1;
+            
+            if (contador===3) {
+                 trasladoBotonInicio(); 
+            }
         } else {
-             alert("La imagen no corresponde al rompecabezas");
+             alert("La imagen no corresponde a esta parte del rompecabezas");
              
         };
  });  
@@ -44,8 +52,12 @@
      if (dataImagen==="./imagenes/Rompe2.png") {
         destinoRompe2.innerHTML=`<img id="imagenes_rompe2" src="${dataImagen}"/>`;
         imagenRompe2.style.visibility="hidden";
+        contador=contador+1;
+        if (contador===3) {
+            trasladoBotonInicio();  
+        }
     } else {
-         alert("La imagen no corresponde al rompecabezas");
+         alert("La imagen no corresponde a esta parte del rompecabezas");
          
     };
  }); 
@@ -55,8 +67,12 @@
      if (dataImagen==="./imagenes/Rompe3.png") {
         destinoRompe3.innerHTML=`<img id="imagenes_rompe3" src="${dataImagen}"/>`;
         imagenRompe3.style.visibility="hidden";
+        contador=contador+1;
+        if (contador===3) {
+            trasladoBotonInicio();   
+        }
     } else {
-         alert("La imagen no corresponde al rompecabezas");
+         alert("La imagen no corresponde a esta parte del rompecabezas");
         
     };
  }); 
@@ -64,10 +80,18 @@
  
  function prevenirDefault(evento) {
      evento.preventDefault()
- }
- 
+ };
+
  /*Reiniciar */
- let botonInicio=document.getElementById("reinicio")
- botonInicio.addEventListener("click",()=>{
-      window.location.reload();
+ let botonInicio=document.getElementById("reinicio");
+
+ //traslado el botón Reiniciar en la pantalla luego de mover todas las imágenes
+ function trasladoBotonInicio() {
+    //agrega una clase de css para mover el botón más cerca del rompecabezas
+    botonInicio.classList.add("traslada_boton_reinicio");
+ };
+
+ 
+ botonInicio.addEventListener("click",()=>{ 
+    window.location.reload();
  });

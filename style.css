@@ -214,8 +214,7 @@ rect#transf2, polygon#transf2{
 }
 
 .duracion{
-    padding-right: 110px;
-    align-items:right;
+   align-items:right;
     text-align: right;
     
 }
@@ -226,12 +225,14 @@ rect#transf2, polygon#transf2{
 }
 
 .boton{
-    border-color: 10px black;
+    
     box-shadow: 2px 3px darkgray;
     transform: translate(3px, 2px);
     width: 80px;
     height: 40px;
     
+    border: 2px, solid, black;
+    border-radius: 10px;
 }
 
 /* Página juegos*/
@@ -281,6 +282,10 @@ rect#transf2, polygon#transf2{
     height: 40px;
     margin: 20px 0px;
     
+}
+
+.traslada_boton_reinicio{
+    transform: translate(0px,-400px);
 }
 /* Pie de página*/
 footer{
